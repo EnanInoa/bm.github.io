@@ -1,0 +1,649 @@
+@import url("reset.css");
+
+@font-face {
+  font-family: 'Outfit';
+  src:
+    url('../../fuentes/Outfit-Light.ttf');
+}
+
+body {
+  font-family: Outfit, sans-serif;
+}
+
+main {
+  height: 80vh;
+}
+
+header {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border-bottom: 1px solid black; */
+  background-color: #0e62fd;
+  padding: 11px 0;
+  box-shadow: rgba(22, 22, 22, 0.685) .5px 1.5px 3px;
+}
+
+
+header a {
+  color: #fff;
+}
+
+
+.contenedor_usuario {
+  color: rgba(255, 255, 255, 0.911);
+  font-weight: 100;
+  display: flex;
+  padding: 5px;
+  /* gap: 1em; */
+  margin-left: 2em;
+  align-items: center;
+}
+
+.contenedor_usuario i {
+  font-size: 2.5em;
+}
+
+.info-usuario {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 10px;
+  gap: 5px;
+}
+
+.info-usuario p:first-child {
+  font-weight: bold;
+}
+
+.nav-menu ul {
+  display: flex;
+  align-items: baseline;
+  margin-right: 2em;
+  gap: 3px;
+}
+
+.nav-menu>ul>li>a,
+.menu-usuarios>li>a {
+  padding: 8px 16px;
+  font-size: 1.15em;
+  color: rgba(255, 255, 255, 0.815);
+  font-weight: 200;
+  border-radius: 3%;
+  text-decoration: none;
+  text-align: left;
+}
+
+.menu-usuarios>li>a {
+  display: block;
+  width: 100%;
+  /* padding: 8px 0; */
+}
+
+.nav-menu>ul>li>a:hover,
+.menu-usuarios>li>a:hover,
+li.link_usuarios:hover>a {
+  transition: .3s all;
+  color: #fff;
+  background-color: #00000017;
+}
+
+.menu-usuarios>li {
+  border-top: 1px solid rgba(255, 255, 255, 0.212);
+  text-align: center;
+  width: 100%;
+
+}
+
+.menu-usuarios>li>a {
+  padding: 18px auto;
+  font-size: 1.1em;
+  width: 100%;
+
+}
+
+.nav-menu ul li a.actual {
+  color: #fff;
+}
+
+li.link_usuarios {
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.link_usuarios a {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.link_usuarios img {
+  opacity: .7;
+}
+
+.nav-menu .menu-usuarios {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: opacity .7s ease-out;
+}
+
+.nav-menu .menu-usuarios {
+
+  background-color: #0456ec;
+  top: 100;
+  width: 170%;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  border-radius: 0px 0px 10px 10px;
+  /* display none para ocultarlo mientra no se hace hover (lo quité para que se note la transición) */
+  /* display: none; */
+}
+
+
+.link_usuarios:hover+ul,
+.menu-usuarios:hover {
+  opacity: 1;
+  height: auto;
+  display: block;
+}
+
+.link_usuarios:hover img,
+ .actual img {
+  opacity: .85;
+}
+
+
+main.paginaPrincipal {
+  display: flex;
+}
+
+.usuarios {
+  /* padding: 100px; */
+  /* min-height: 40vh; */
+  gap: 3em;
+  display: grid;
+  /* grid-template-columns: repeat(3, 1fr); */
+grid-template-columns: repeat(auto-fit, minmax(19em, 1fr));
+  justify-items: center;
+  width: 100%;
+}
+
+.usuarios .cantidad_usuarios {
+  height: 140px;
+  padding: 10px;
+  width: 80%;
+  border: 1px solid #000;
+}
+
+main {
+  padding-top: 100px;
+}
+
+main h1 {
+
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  padding: 20px;
+}
+
+
+
+.contenedor-contenedor {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  /* height: 60vh; */
+}
+
+
+.contenedor-tabla {
+  padding: 2px;
+  /* margin-bottom: 10px; */
+  border: 5px solid rgba(2, 2, 2, 0.062);
+  /* box-shadow: #000 1px 1px 6px 1px; */
+  box-shadow: #000000ab 0.5px 1px 6px 1.5px;
+  max-height: 70vh;
+  overflow-x: auto;
+  border-radius: 10px;
+  max-width: 91%;
+
+}
+
+.contenedor-tabla table {
+  font-size: 18px;
+  border-collapse: collapse;
+}
+
+.contenedor-tabla table thead {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 .9px 0 #c4c4c4;
+
+    /*para que funcione en firefox*/
+  -moz-boxfilter: drop-shadow(0 .9px 0 #c4c4c4);
+  -webkit-filter: drop-shadow(0 .9px 0 #c4c4c4);
+
+  left: 0;
+  position: sticky;
+  position: -webkit-sticky;
+  top: -6px;
+  z-index: 0;
+}
+
+
+.agregar img {
+  width: 39px;
+}
+
+
+table th:first-of-type {
+  padding: 15px;
+  border: 1px solid #00000041;
+  box-shadow: .5px 0px 0px #c4c4c4;
+  /*para que funcione en firefox*/
+
+  border-width: 0 .9px 0 0;
+  background-color: #fff;
+}
+
+.no-accion th:first-of-type {
+
+  border: none;
+}
+
+
+main table th {
+  text-transform: Capitalize;
+  font-weight: bold;
+  padding: 17px;
+     white-space: nowrap;
+}
+
+main table td {
+  padding: 19px 25px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.datosPersonales {
+  align-items: center;
+  background-color: rgb(115, 181, 92);
+  display: flex;
+  flex-direction: column;
+  height: 88vh;
+}
+
+.contenedorDatosPersonales {
+  flex-direction: column;
+  display: inherit;
+  gap: 20px;
+  padding: 20px;
+}
+
+.contenedorDatosPersonales ul li {
+  font-size: 20px;
+  margin: 8px 0px;
+  padding: 8px 0px;
+}
+
+.contenedorDatosPersonales h1 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.id_input {
+  width: 20px;
+  text-align: center;
+}
+
+
+
+.menu-perfil,
+#perfil {
+  transition: opacity .7s ease-out;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+#perfil:checked~.menu-perfil {
+  border-top: 1px solid rgba(20, 20, 20, 0.212);
+  top: 100%;
+  left: 3%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #0075e2;
+  padding: 10px;
+  border-radius: 0px 0px 10px 10px;
+  opacity: 1;
+  height: auto;
+  width: auto;
+  z-index: 2;
+}
+
+label {
+  width: 54px;
+}
+
+label img {
+  transition: all .1s ease;
+  width: 100%;
+}
+
+label img:hover {
+  opacity: .75;
+  cursor: pointer;
+}
+
+label img:active {
+  transform: scale(.9);
+}
+
+
+.menu-perfil li {
+  padding: 4px 2px;
+}
+
+.menu-perfil li a {
+  text-decoration: none;
+  padding: 1px;
+  display: flex;
+  align-items: center;
+}
+
+.menu-perfil li a:hover {
+  text-decoration: underline;
+}
+
+.menu-perfil img {
+  width: 17%;
+  padding: 5px;
+}
+
+.icono {
+  padding: 0 4px;
+  max-width: 35px;
+  width: 25px;
+}
+
+.icono:hover {
+  transition: all .2s;
+  border-radius: 10%;
+  background-color: rgba(0, 0, 0, 0.219);
+}
+
+
+tbody tr:hover {
+  transition: all .2s;
+  /* border-radius: 10%; */
+  background-color: rgb(213, 214, 218);
+}
+
+.icono:active {
+  transition: all .2s;
+  transform: scale(.95);
+}
+
+.off:active,
+.off:hover {
+  transform: scale(1);
+  background-color: rgb(255, 255, 255);
+}
+
+
+
+
+
+
+/*====================================
+
+Cambiarle estilos a la barra de scroll
+
+========================================*/
+.contenedor-tabla::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.contenedor-tabla::-webkit-scrollbar:vertical {
+  width: 10px;
+}
+
+.contenedor-tabla::-webkit-scrollbar-button:increment,
+.contenedor-tabla::-webkit-scrollbar-button {
+  display: none;
+}
+
+.contenedor-tabla::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+.contenedor-tabla::-webkit-scrollbar-thumb {
+  background-color: #797979;
+  border-radius: 20px;
+  border: 2px solid #f1f2f3;
+}
+
+.contenedor-tabla::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+.contenedor-tabla {
+  scrollbar-color: rgba(0, 0, 0, .5) rgba(0, 0, 0, 0);
+  scrollbar-width: thin;
+}
+
+
+
+/* ==========================================
+
+Formularios para editar y agregar campos
+
+===============================================*/
+
+form {
+  height: 70vh;
+  overflow-y: auto;
+margin: 30px auto;
+  background-color: #4e80ad;
+  max-width: 140vh;
+  padding: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.199);
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.603) 1px 1px 7px 1px;
+  display: flex;
+  justify-content: center;
+}
+
+.contenedor-agregar {
+  display: inherit;
+  flex-direction: column;
+  align-items: center;
+  /* width: 80%; */
+  padding: 10px;
+  gap: 2.7em;
+  /* margin-top: 50px; */
+  align-items: center;
+}
+
+
+.contenedor-agregar h2 {
+  text-transform: uppercase;
+  font-weight: bold;  
+  font-size: 20PX;
+}
+
+.contenedor-campos *{
+ color: #fff;
+}
+
+.contenedor-campos {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 5px;
+  align-items: center;
+}
+
+.contenedor-campos input,
+select {
+  border: 0;
+  margin-top: 5px;
+  border-radius: 2px;
+  text-align: center;
+}
+
+
+.contenedor-campos select {
+background-color: rgba(28, 30, 32, 0);
+color: #fff;
+height: 30px;
+font-size: 18px;
+outline: none;
+border-radius: 5px;
+ border: 1px solid #FFFFFF;
+transition: 3s all;
+display: inline-block;
+}
+
+
+.contenedor-campos option
+{
+ background-color: #091929;
+ transition: 3s all;
+ outline: none;
+}
+
+
+.contenedor-campos input {
+  border-bottom: 1px solid white;
+  width: 40;
+}
+.contenedor-campos label {
+  font-size: 20px;
+  text-align: center;
+  width: 100px;
+}
+
+.contenedor-campos label, input {
+  outline: none;
+  background-color: transparent;
+}
+
+
+.btnes {
+  color: #fff;
+  border: 0;
+  border: 1px solid white;
+  margin-top: 5px;
+  border-radius: 3px;
+  padding: 8px 25px;
+  background-color: #333;
+  text-transform: capitalize;
+  }
+
+
+
+/* =======================================
+
+               Menu Responsive         
+
+==========================================*/
+
+
+.icono-menu img {
+  width: 35px;
+  display: none;
+}
+
+
+#checkbox-menu {
+  display: none;
+}
+
+@media (max-width: 670px) {
+  header {
+    gap: 0em;
+  }
+
+
+  .icono-menu img {
+    display: block;
+    margin-right: 25px;
+  }
+
+  .nav-menu ul {
+    z-index: 1;
+    flex-direction: column;
+    position: fixed;
+    background-color: #050505e3;
+    top: 88px;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    transition: .6s all ease;
+    left: 100%;
+    gap: 30px;
+  }
+
+  .nav-menu li.link_usuarios  {
+    width: 111px;
+  }
+
+
+
+  .nav-menu .menu-usuarios {
+    background-color: rgba(0, 0, 0, 0.226);
+    top: 0px;
+    left: 0;
+    gap: 0;
+    width: 140%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 0px 0px 10px 10px;
+transition: 1.5s all;
+  }
+
+  .nav-menu>ul>li {
+    margin-top: 25px;
+  }
+
+  .nav-menu>ul>li>a:hover,
+  .link_usuarios li:hover {
+   background-color: rgba(58, 58, 58, 0.486);
+  }
+
+  a.actual {
+     background-color: rgba(58, 58, 58, 0.404);
+   }
+
+   .nav-menu>ul>li:first-of-type {
+     margin-top: 90px;
+   }
+
+  #checkbox-menu:checked~ul {
+
+    left: 0;
+  }
+}
+
+
+/* ========================================================
+
+para reducir el largo de la tabla en dispositivos pequeños
+
+========================================================*/
+
+@media screen and (max-height: 500px) {
+  .contenedor-tabla {
+    max-height: 55vh;
+  }
+}

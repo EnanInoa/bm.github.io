@@ -1,0 +1,11 @@
+﻿revisar ver perfil(profe) CR
+al agregar nota de estudiante me aparecen todos los estudiantes, aunque no sean del curso que he elegido CR
+login en dispositivos moviles se ve muy pequeño
+tablas en dispositivos moviles se cortan un poco en la parte de abajo
+icono de menu, en ver perfil (estudiante) DI
+redondear calculo de promedio final de nota
+menu perfil por encima de menu navegacion DI
+
+
+ver pagina en movil live server ipconfig ipv4 + puerto
+ver sistema ngrok

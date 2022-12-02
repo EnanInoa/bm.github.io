@@ -1,0 +1,35 @@
+
+
+
+
+
+
+- al editar o  agregar al profesor, si eligo grado -- y ya alguien mas lo tiene, me dice, error al modificar datos o no se agrega en el caso de agregar Done(aunque hay algunos problemas en las relaciones de la bd en la tabla grado y el valor 0 --)
+
+
+
+estilos offline (css's diego)
+- no mostrar grados ocupados al agregar nuevo profe (done: agregarProfesor)
+- editar grado estudiante (done: editarEstudiante, procesarEditarEstudiante yo)
+- poner validacion de caracteres al crear o modificar usuarios (matricula al crear, pass y username) (done: editar y agregar usuarios, Cristino)
+- mostrar materia solo al titular de esa materia (done: regidtroNotaMateria Diego)
+
+
+
+
+- al editar al profesor que muestre la materia donde es titular, ahora solo salen las materias donde Nadie es titular DONE
+
+- no editar matriculas DONE	
+
+- permitir editar grado de estudiante 
+
+
+
+
+
+
+
+
+
+https://www.youtube.com/watch?v=YR2-3a8cu8c
+https://www.youtube.com/watch?v=cQ0UPVSFwBE 

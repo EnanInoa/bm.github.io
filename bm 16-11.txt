@@ -1,0 +1,8 @@
+Cristino 
+
+creo la pagina notas2 en profesores y en listado de estudiantes agregó campo con links para ver notas
+input de usuarios editar y agregar
+
+Diego 
+input de grado
+''    de notas editar y agregar

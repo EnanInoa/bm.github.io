@@ -1,0 +1,606 @@
+@import url("reset.css");
+
+@font-face {
+    font-family: 'Outfit';
+    src:
+        url('../fuentes/Outfit-Light.ttf');
+}
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+    min-height: 100%;
+    font-family: Outfit, sans-serif;
+    display: grid;
+    grid-template-areas: "header""main""footer";
+    gap: 3em;
+
+}
+
+body.contacto {
+    display: grid;
+    grid-template-areas: "header""main""aside""footer";
+    gap: 0px;
+}
+
+.inicio header {
+    background: url("../imagenes/footer2.jpg") no-repeat;
+    /* background-size: 100% 100%; */
+    background-size: cover;
+    background-position: center center;
+}
+
+.contacto header {
+    background: url("../imagenes/utiles.jpg") no-repeat;
+    /* background-size: 100% 100%; */
+    background-size: cover;
+    background-position: center center;
+}
+
+header::before {
+    content: "";
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    background-color: #1a1a1a81;
+
+}
+
+header .logo {
+    z-index: 1;
+}
+
+header .logo img {
+    width: 44vh;
+    transition: 0.2s ease-in;
+
+}
+
+header .logo img:hover {
+    filter: brightness(1.2);
+}
+
+header {
+
+    grid-area: header;
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center;
+    width: 100%; */
+
+    position: relative;
+    gap: 50px;
+    min-height: 310px;
+}
+
+.contenedor-header {
+    padding: 1em 0;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    gap: 1.2em;
+    /* line-height: 1em; */
+    border-bottom: 1px solid #fff;
+    z-index: 1;
+    font-size: .9em;
+    filter: brightness(0.85);
+    width: 90%;
+}
+
+header .logo {
+    width: 50%;
+    min-width: 140px;
+}
+
+header .logo img {
+
+    width: 100%;
+    transition: 0.2s ease-in;
+}
+
+header .logo img:hover {
+    filter: brightness(1.2);
+}
+
+header nav {
+    width: 100%;
+    margin-left: 1em;
+}
+
+header ul {
+    display: flex;
+    justify-content: space-evenly;
+
+    /* gap: 1.5em; */
+    /* text-align: center; */
+}
+
+header ul li a {
+    z-index: 1;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    transition: all 0.5s;
+    transition: color 0.5s;
+    font-weight: 100;
+    /* margin-left: .5em; */
+
+    /* font-size: .9em; */
+}
+
+header ul li a:hover {
+    color: #00f7ff;
+    font-weight: 400;
+}
+
+.actual a {
+    color: #00e3f3d0;
+}
+
+.parrafo-principal {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: .3em;
+    font-size: 27px;
+    z-index: 1;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.parrafo-principal h1 {
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.parrafo-principal p {
+    width: 60%;
+    text-align: center;
+    font-size: .6em;
+    line-height: 1.4em;
+    font-weight: 200;
+}
+
+
+main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    line-height: 1.2em;
+}
+
+.inicio .contenido {
+    align-self: center;
+    width: 90%;
+    display: inherit;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 30%;
+    line-height: 1.7em;
+}
+
+.contenido p {
+    text-align: center;
+}
+
+main h2 {
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 1em;
+    font-size: 1.2em;
+    font-style: italic;
+    font-weight: bold;
+    width: 90%;
+}
+
+.inicio section {
+    display: grid;
+    justify-items: center;
+    grid-auto-rows: 17em;
+
+    grid-template-columns: repeat(auto-fit, minmax(19em, 1fr));
+    gap: 2em .1em;
+    width: 100%;
+}
+
+
+.nosotros {
+    background: #f3f3f3fb;
+    min-height: 280px;
+    border-radius: 0.5em;
+    width: 85%;
+    transition: 0.8s;
+    position: relative;
+
+}
+
+
+.contenedor-nosotros {
+
+    gap: 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+.mision {
+    border: 2px solid rgb(0, 102, 219);
+    border-top: 6px solid rgb(0, 102, 219);
+    box-shadow: rgb(0, 102, 219) 1.3px 1.3px 4px 0.5px;
+}
+
+
+.vision {
+    border: 2px solid rgb(219, 0, 55);
+    border-top: 6px solid rgb(219, 0, 55);
+    box-shadow: rgb(219, 0, 55) 1.3px 1.3px 4px 0.5px;
+}
+
+.valores {
+    /* padding: 20px; */
+    border: 2px solid rgb(243, 179, 3);
+    border-top: 6px solid rgb(243, 179, 3);
+    box-shadow: rgb(243, 179, 3) 1.3px 1.3px 4px 0.5px;
+
+}
+
+.nosotros:hover {
+    transform: translateY(-3.5%);
+    transition: all .7s;
+    cursor: default;
+}
+
+.mision:hover {
+    box-shadow: rgb(0, 102, 219) .4em .65em .5em -.4em;
+}
+
+.vision:hover {
+    box-shadow: rgb(219, 0, 55) .4em .65em .5em -.4em;
+}
+
+.valores:hover {
+    box-shadow: rgb(243, 179, 3) .4em .65em .5em -.4em;
+}
+
+.nosotros p {
+    line-height: 1.5em;
+    text-align: justify;
+    width: 70%;
+}
+
+.valores ul {
+    margin-top: 1em;
+    gap: 2.2em;
+    display: flex;
+    flex-direction: column;
+}
+
+/* main y aside de pagina contacto */
+.contenedor_contacto {
+    display: grid;
+    grid-auto-rows: 30em;
+    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+    gap: .1px;
+    border-top: 1px solid #fff;
+
+}
+
+.section_contacto {
+    display: flex;
+    justify-content: center;
+}
+
+.info-formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5%;
+    margin-top: 1.5em;
+    width: 100%;
+}
+
+.info-formulario ul,
+.info-formulario form {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5em;
+    height: 100%;
+}
+
+/* Informacion de contacto (Izquierda) */
+.izq {
+    background-color: rgb(59, 61, 66);
+}
+
+.izq h2 {
+    color: #fff;
+}
+
+.izq p {
+    color: #fff;
+    font-weight: bold;
+    font-size: .95em;
+    text-transform: uppercase;
+}
+
+.izq li {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 87%;
+}
+
+.izq .info div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+
+.izq i {
+    font-size: 30px;
+    color: #fff;
+    padding: 0.5em;
+    border-right: 1.2px solid #ffffff;
+}
+
+.izq a {
+    font-style: italic;
+    font-weight: 100;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1em;
+}
+
+.izq a:hover {
+    text-decoration-line: underline;
+}
+
+/* FORMULARIO DE CONTACTO (DERECHA) */
+
+form {
+    width: 60%;
+}
+
+form input {
+    font-size: .9em;
+    color: rgba(39, 39, 39, 0.89);
+    font-family: Outfit,
+        sans-serif;
+    transition: 0.8s all;
+    margin: 2px 0;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    min-height: 35px;
+    width: 100%;
+    border-bottom: 1px solid rgb(44, 44, 44);
+}
+
+form input:focus,
+form textarea:focus {
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    border-bottom: 1px solid rgb(44, 44, 44);
+}
+
+form textarea {
+    font-size: .9em;
+    color: rgba(39, 39, 39, 0.89);
+    font-family: Outfit,
+        sans-serif;
+    transition: 0.8s all;
+    margin: 5px 0 10px 0;
+    background-color: transparent;
+    border: 0;
+    max-width: 120px;
+    min-width: 100%;
+    max-height: 90px;
+    height: 20px;
+    min-height: 35px;
+    border-bottom: 1px solid #000;
+}
+
+form input:focus,
+form textarea:focus {
+    border-bottom: 1px solid #0059ff;
+}
+
+form .boton_contacto {
+    color: rgb(216, 216, 216);
+    background: #026ae0;
+    border-radius: 2px;
+    border: 0;
+    height: 40px;
+    width: 100%;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+form .boton_contacto:hover {
+    color: #fff;
+    background-color: #024da1;
+}
+
+/* MAPA DE CONTACTO */
+aside iframe {
+    grid-area: "aside";
+    width: calc(100% - 3px);
+    min-height: 150px;
+    border: 1.5px solid #fff;
+    border-bottom: 0;
+}
+
+footer {
+    grid-area: footer;
+    padding: 5px 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    color: #fff;
+    background-color: #161616;
+
+}
+
+nav.redes {
+    max-height: 40px;
+    margin: 15px 0 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: 1.13em;
+    align-self: center;
+    gap: 15px;
+
+}
+
+nav.redes ul {
+    align-self: center;
+    display: flex;
+    gap: 40px;
+}
+
+nav.redes h3 {
+    color: #ffffff;
+    letter-spacing: .3em;
+    font-size: 1.1em;
+}
+
+nav.redes i {
+    color: #fff;
+    font-size: 1.3em;
+    transition: 0.2s ease-out;
+}
+
+nav .fb i {
+    font-size: 1.2em;
+}
+
+.fb i:hover {
+    color: #1f55eb;
+}
+
+.ig i:hover {
+    background: linear-gradient(rgb(139, 3, 151), rgb(255, 0, 64));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tt i:hover {
+    color: #149fd6;
+}
+
+.copy {
+    display: flex;
+    justify-content: center;
+}
+
+#easteregg {
+    align-self: center;
+    display: flex;
+    justify-content: flex-end;
+    width: 11em;
+    font-size: 1.4em;
+    max-height: .5em;
+    /* display: block; */
+    color: transparent;
+}
+
+#easteregg i {
+    transition: 0.3s all;
+    cursor: none;
+    align-self: flex-end;
+}
+
+#easteregg i:hover {
+    color: rgb(255, 0, 13);
+}
+
+/* tablets */
+@media screen and (min-width: 610px) {
+
+    .contenedor-header {
+        align-self: center;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        font-size: .95em;
+    }
+
+    header nav {
+        max-width: 400px;
+    }
+
+    .inicio header,
+    .contacto header {
+        background-size: cover;
+        background-position: center;
+    }
+
+
+    header .logo {
+        width: 39%;
+    }
+
+    .inicio h2,
+    .contacto main h2 {
+        font-size: 25px;
+    }
+
+    .valores {
+        grid-column: span 2;
+    }
+
+    aside iframe {
+        min-height: 250px;
+    }
+
+}
+
+
+@media screen and (min-width: 800px) {
+
+    .inicio header {
+        /* background: url("../imagenes/footer2.jpg") no-repeat; */
+        /* background-size: cover; */
+        /* background-size: cover; */
+        background-position: 0 60%;
+    }
+
+    header .logo {
+        width: 26%;
+    }
+
+    .inicio section {
+        grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+    }
+
+
+    .valores {
+        grid-column: span 1;
+    }
+}

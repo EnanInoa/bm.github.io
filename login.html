@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/login.css">
+  <title></title>
+</head>
+
+<body id="login">
+  <main>
+    <a id="back" href="index.html"><img src="sistema/iconos/arrow-in.svg" alt=""></a>
+    <figure class="imagen">
+
+      <!-- <i class="fa-solid fa-arrow-left"></i> -->
+      <img src="imagenes/bm.png">
+    </figure>
+    <h1>Iniciar sesión</h1>
+    <form action="sistema/verificar_usuario.php" method="post">
+      <div class="user_info">
+        <input type="text" id="user" name="usuario" pattern="[a-zA-Z0-9]{4,20}" required autofocus
+          title="su nombre de usuario debe contener al menos 4 caracteres y solo letras o números"
+          placeholder="Usuario">
+        <input type="password" id="contra" name="clave" required="" minlength="4" pattern="[a-zA-Z0-9]{4,20}"
+          title="su contraseña debe contener al menos 4 caracteres y solo letras o números" placeholder="Contraseña">
+      </div>
+      <button>Ingresar</button>
+    </form>
+  </main>
+</body>
+<footer>
+  <p>&copy; Todos los Derechos Reservados - Brilliant Minds 2022</p>
+</footer>
+
+</html>
