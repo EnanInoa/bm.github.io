@@ -7,8 +7,8 @@ session_start();
 /* ================================================================================= 
 obtener datos del login
 ================================================================================= */
-$usuario = mysqli_real_escape_string($conexion,$_POST['usuario']);
-$clave = mysqli_real_escape_string($conexion,$_POST['clave']);
+$usuario = mysqli_real_escape_string($conexion,$_GET['usuario']);
+$clave = mysqli_real_escape_string($conexion,$_GET['clave']);
 
 
 
